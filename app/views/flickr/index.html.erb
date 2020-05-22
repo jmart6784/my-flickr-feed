@@ -1,0 +1,22 @@
+<div id="title-container">
+  <a id="title-link" href=<%= root_path %>>
+    <h1 id="title">Flickr Search</h1>
+  </a>
+</div>
+
+<div id="form-container">
+  <%= form_for(:search, url: root_path, method: "GET") do |search| %>
+    <%= search.text_field :user, id: "search-text-field", placeholder: "Enter Flickr user id" %><br>
+    <%= search.submit "Search", id: "search-btn" %>
+  <% end %>
+</div>
+
+<% if params[:search] %>
+  <div id="photo-feed">
+    <% @photos.each do |photo| %>
+      <div id="photo-div">
+        <%= image_tag("https://farm#{photo.farm}.staticflickr.com/#{photo.server}/#{photo.id}_#{photo.secret}.jpg", width: "800", height: "500", alt: "Photostream", class: "photo") %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
