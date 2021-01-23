@@ -22,8 +22,8 @@ Run the project locally (prerequisites: ruby 3.0.0, rails 6.0.3.1):
 9. run  bundle exec figaro install
 10. open config/application.yml and add your API key to the file:
 
-  flickr_api_key: "YOUR_API_KEY_HERE"
-  flickr_secret: "YOUR_SECRET_HERE"
+flickr_api_key: "YOUR_API_KEY_HERE"
+flickr_secret: "YOUR_SECRET_HERE"
 
 11. rails s
 12. In your internet browser visit localhost:3000
