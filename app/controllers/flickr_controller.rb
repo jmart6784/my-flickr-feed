@@ -1,8 +1,8 @@
 class FlickrController < ApplicationController
 
   def index
-    FlickRaw.api_key = ENV['flickr_api_key']
-    FlickRaw.shared_secret = ENV['flickr_secret']
+    FlickRaw.api_key = Rails.application.credentials.dig(:flickr_api_key)
+    FlickRaw.shared_secret = Rails.application.credentials.dig(:flickr_secret)
     @flickr = FlickRaw::Flickr.new
 
     if params[:search]
