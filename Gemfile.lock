@@ -81,6 +81,8 @@ GEM
     childprocess (3.0.0)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
+    dockerfile-rails (1.0.14)
+      rails
     erubi (1.10.0)
     ffi (1.14.2)
     figaro (1.2.0)
@@ -213,6 +215,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  dockerfile-rails (>= 1.0)
   figaro
   flickraw
   jbuilder (~> 2.7)
